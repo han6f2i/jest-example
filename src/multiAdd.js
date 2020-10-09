@@ -1,0 +1,1 @@
+export const multiAdd = array => array.reduce((sum, next) => sum + next, 0)

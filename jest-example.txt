@@ -1,0 +1,142 @@
+
+PS C:\Users\Han\Desktop\code> mkdir jest-example
+
+
+    目錄: C:\Users\Han\Desktop\code
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d-----      2020/10/10  上午 02:20                jest-example
+
+
+PS C:\Users\Han\Desktop\code> cd .\jest-example\
+PS C:\Users\Han\Desktop\code\jest-example> npm init -y
+Wrote to C:\Users\Han\Desktop\code\jest-example\package.json:
+
+{
+  "name": "jest-example",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
+
+
+PS C:\Users\Han\Desktop\code\jest-example> npm install -D jest
+npm WARN deprecated resolve-url@0.2.1: https://github.com/lydell/resolve-url#deprecated
+npm WARN deprecated urix@0.1.0: Please see https://github.com/lydell/urix#deprecated
+npm WARN deprecated request@2.88.2: request has been deprecated, see https://github.com/request/request/issues/3142
+npm WARN deprecated request-promise-native@1.0.9: request-promise-native has been deprecated because it extends the now deprecated request package, see https://github.com/request/request/issues/3142
+npm WARN deprecated har-validator@5.1.5: this library is no longer supported
+npm notice created a lockfile as package-lock.json. You should commit this file.
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: fsevents@^2.1.2 (node_modules\jest-haste-map\node_modules\fsevents):
+npm WARN notsup SKIPPING OPTIONAL DEPENDENCY: Unsupported platform for fsevents@2.1.3: wanted {"os":"darwin","arch":"any"} (current: {"os":"win32","arch":"x64"})
+npm WARN jest-example@1.0.0 No description
+npm WARN jest-example@1.0.0 No repository field.
+
++ jest@26.5.2
+added 504 packages from 343 contributors and audited 505 packages in 30.224s
+
+21 packages are looking for funding
+  run `npm fund` for details
+
+found 0 vulnerabilities
+
+PS C:\Users\Han\Desktop\code\jest-example> mkdir src
+
+
+    目錄: C:\Users\Han\Desktop\code\jest-example
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d-----      2020/10/10  上午 02:24                src
+
+
+PS C:\Users\Han\Desktop\code\jest-example> mkdir test
+
+
+    目錄: C:\Users\Han\Desktop\code\jest-example
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d-----      2020/10/10  上午 02:24                test
+
+
+PS C:\Users\Han\Desktop\code\jest-example>
+PS C:\Users\Han\Desktop\code\jest-example> npm -v
+6.14.8
+PS C:\Users\Han\Desktop\code\jest-example> node -v
+v12.16.2
+PS C:\Users\Han\Desktop\code\jest-example> npm install -D babel-jest @babel/core @babel/preset-env
+npm WARN jest-example@1.0.0 No description
+npm WARN jest-example@1.0.0 No repository field.
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: fsevents@2.1.3 (node_modules\fsevents):
+npm WARN notsup SKIPPING OPTIONAL DEPENDENCY: Unsupported platform for fsevents@2.1.3: wanted {"os":"darwin","arch":"any"} (current: {"os":"win32","arch":"x64"})
+
++ @babel/preset-env@7.11.5
++ babel-jest@26.5.2
++ @babel/core@7.11.6
+added 105 packages from 27 contributors, updated 2 packages and audited 612 packages in 11.877s
+
+35 packages are looking for funding
+  run `npm fund` for details
+
+found 0 vulnerabilities
+PS C:\Users\Han\Desktop\code\jest-example> npm install jest --global
+npm WARN deprecated resolve-url@0.2.1: https://github.com/lydell/resolve-url#deprecated
+npm WARN deprecated urix@0.1.0: Please see https://github.com/lydell/urix#deprecated
+npm WARN deprecated request@2.88.2: request has been deprecated, see https://github.com/request/request/issues/3142
+npm WARN deprecated request-promise-native@1.0.9: request-promise-native has been deprecated because it extends the now deprecated request package, see https://github.com/request/request/issues/3142
+npm WARN deprecated har-validator@5.1.5: this library is no longer supported
+C:\Users\Han\AppData\Roaming\npm\jest -> C:\Users\Han\AppData\Roaming\npm\node_modules\jest\bin\jest.js
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: fsevents@^2.1.2 (node_modules\jest\node_modules\jest-haste-map\node_modules\fsevents):
+npm WARN notsup SKIPPING OPTIONAL DEPENDENCY: Unsupported platform for fsevents@2.1.3: wanted {"os":"darwin","arch":"any"} (current: {"os":"win32","arch":"x64"})
+
++ jest@26.5.2
+added 504 packages from 343 contributors in 21.639s
+PS C:\Users\Han\Desktop\code\jest-example> jest --init
+
+The following questions will help Jest to create a suitable configuration for your project
+
+√ Would you like to use Jest when running "test" script in "package.json"? ... yes
+√ Choose the test environment that will be used for testing » jsdom (browser-like)
+√ Do you want Jest to add coverage reports? ... yes
+√ Which provider should be used to instrument code for coverage? » v8
+√ Automatically clear mock calls and instances between every test? ... yes
+
+✏️  Modified C:\Users\Han\Desktop\code\jest-example\package.json
+
+�  Configuration file created at C:\Users\Han\Desktop\code\jest-example\jest.config.js
+PS C:\Users\Han\Desktop\code\jest-example> npm run test
+
+> jest-example@1.0.0 test C:\Users\Han\Desktop\code\jest-example
+> jest
+
+ PASS  test/add.test.js
+ PASS  test/multiAdd.test.js
+------------------|---------|----------|---------|---------|-------------------
+File              | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s
+------------------|---------|----------|---------|---------|-------------------
+All files         |    0.97 |    77.78 |   66.67 |    0.97 |
+ jest-example     |       0 |        0 |       0 |       0 |
+  babel.config.js |       0 |        0 |       0 |       0 | 1-12
+  jest.config.js  |       0 |        0 |       0 |       0 | 1-192
+ jest-example/src |     100 |      100 |     100 |     100 |
+  add.js          |     100 |      100 |     100 |     100 |
+  multiAdd.js     |     100 |      100 |     100 |     100 |
+------------------|---------|----------|---------|---------|-------------------
+
+Test Suites: 2 passed, 2 total
+Tests:       2 passed, 2 total
+Snapshots:   0 total
+Time:        8.682 s
+Ran all test suites.
+PS C:\Users\Han\Desktop\code\jest-example>
